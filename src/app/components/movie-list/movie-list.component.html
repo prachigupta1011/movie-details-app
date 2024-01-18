@@ -1,0 +1,17 @@
+<select [(ngModel)]="selectedGenre" (change)="filterMoviesByGenre()">
+    <option value="">All Genres</option>
+    <option *ngFor="let genre of genresArray" [value]="genre">{{ genre }}</option>
+
+  </select>
+
+<div class="movie-list">
+  <div class="movie-item" *ngFor="let movie of filteredMovies">
+      <div class="movie-image">
+          <img [src]="movie.poster_path" alt="{{movie.title}}">
+      </div>
+      <div class="movie-content">
+          <h3 class="movie-title">{{ movie.title }}</h3>
+          <p>{{ movie.overview }}</p>
+      </div>
+  </div>
+</div>
