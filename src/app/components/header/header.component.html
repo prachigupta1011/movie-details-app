@@ -1,8 +1,23 @@
-<header class="app-header">
+<header>
+  <div class="header-container">
+    <h1>{{ title }}</h1>
     <nav>
-        <ul>
-            <li><a routerLink="/movies">Movies</a></li>
-            <!-- <li><a routerLink="/favorites">Favorite Movies</a></li> -->
-        </ul>
+      <div class="nav-button">
+        <a routerLink="/home" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <i class="fa fa-home"></i> Home
+        </a>
+      </div>
+      <div class="nav-button">
+        <a routerLink="/movies" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <i class="fa fa-film"></i> Movies
+        </a>
+      </div>
+      <div class="nav-button">
+        <a routerLink="/favorite" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <i class="fa fa-heart"></i> Favourite
+          <span class="badge">{{ this.homeApiService.favoriteMoviesCount }}</span>
+        </a>
+      </div>
     </nav>
+  </div>
 </header>

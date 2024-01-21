@@ -1,35 +1,14 @@
-.sidenav-container {
-  height: 100vh;
-  background-color: #f0f0f0;
-}
-
-mat-sidenav {
-  width: 250px;
-  background-color: #fff;
-  color: #fff;
-}
-
-
-mat-list-item.selected {
-  background-color: #adb5bd;
-  font-weight: bold;
-  color: #E4B721;
-}
-
-mat-list-item {
-  color: #fff;
-  text-decoration: none;
-}
-
-
-mat-sidenav-content .container {
+.container {
   padding: 20px;
 }
 
 
-.movie-list {
-  text-align: left;
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
 }
+
 
 .movie-card-container {
   margin-bottom: 20px;
@@ -40,21 +19,8 @@ mat-sidenav-content .container {
   max-width: 400px;
 }
 
-
-
 .example-header-image {
   background-size: cover;
-}
-
-/* Style the movie title */
-mat-card-title {
-  font-size: 1.25rem;
-  margin-top: 0;
-}
-
-/* Style the movie overview */
-mat-card-content p {
-  margin: 0;
 }
 
 
@@ -67,6 +33,7 @@ mat-card-content p {
   max-width: 200px;
   position: relative;
 }
+
 
 .movie-title:hover::after {
   content: attr(data-full-title);
@@ -81,6 +48,20 @@ mat-card-content p {
   z-index: 1;
 }
 
+
+button.mat-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.mat-button:hover {
+  background-color: #c82333;
+}
+
 .card-image {
   height: 300px;
   width: 100%;
@@ -88,5 +69,4 @@ mat-card-content p {
 
 .btn-clr {
   font-weight: bold;
-  color: #E4B721; 
 }

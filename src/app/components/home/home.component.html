@@ -1,20 +1,10 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav mode="side" opened>
-    <mat-form-field>
-      <mat-label>Select Genre</mat-label>
-      <mat-select [(ngModel)]="selectedGenre" (selectionChange)="filterMoviesByGenre()">
-        <mat-option value="">All Genres</mat-option>
-        <mat-option *ngFor="let genre of genresArray" [value]="genre">{{ genre }}</mat-option>
-      </mat-select>
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Sort By</mat-label>
-      <mat-select [(ngModel)]="selectedSortBy" (selectionChange)="sortMovies()">
-        <mat-option value="title">Title</mat-option>
-        <mat-option value="release_date">Release Date</mat-option>
-      </mat-select>
-    </mat-form-field>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let title of titleData" (click)="selectTitle(title)" [class.selected]="title === selectedTitle">
+        {{ title.title }}
+      </mat-list-item>
+    </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
@@ -32,18 +22,16 @@
                 <mat-card class="example-card">
                   <mat-card-header>
                     <img mat-card-avatar class="example-header-image" [src]="movie.poster_path" alt="{{movie.title}}">
-                    
                     <mat-card-title class="movie-title" [attr.title]="movie?.title">
                       <a [routerLink]="['/movie', movie._id]" class="btn-clr">{{ movie.title }}</a></mat-card-title>
-
                     <mat-card-subtitle class="movie-title" [attr.title]="movie?.title">{{ movie.release_date }}</mat-card-subtitle>
                   </mat-card-header>
                   <img mat-card-image class="card-image" [src]="movie.poster_path" alt="{{movie.title}}">
                   <mat-card-content>
-                    <p class="movie-title" [attr.title]="movie?.title">{{ movie.overview }}</p>
+                    <p class="movie-title" [attr.title]="movie?.title">{{ movie.title }}</p>
                   </mat-card-content>
                   <mat-card-actions>
-                    <button mat-button class="btn-clr" *ngIf="!isFavorite(movie)" (click)="toggleFavorite(movie)">Favorite</button> 
+                    <button mat-button class="btn-clr" *ngIf="!isFavorite(movie)" (click)="toggleFavorite(movie)">Favorite</button>
                     <button mat-button class="btn-clr" *ngIf="isFavorite(movie)" (click)="removeFavorite(movie)">Remove Favorite</button>
                   </mat-card-actions>
                 </mat-card>

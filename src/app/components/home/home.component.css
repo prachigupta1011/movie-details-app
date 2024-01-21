@@ -3,6 +3,7 @@
   background-color: #f0f0f0;
 }
 
+
 mat-sidenav {
   width: 250px;
   background-color: #fff;
@@ -31,6 +32,7 @@ mat-sidenav-content .container {
   text-align: left;
 }
 
+
 .movie-card-container {
   margin-bottom: 20px;
 }
@@ -46,13 +48,13 @@ mat-sidenav-content .container {
   background-size: cover;
 }
 
-/* Style the movie title */
+
 mat-card-title {
   font-size: 1.25rem;
   margin-top: 0;
 }
 
-/* Style the movie overview */
+
 mat-card-content p {
   margin: 0;
 }

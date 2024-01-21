@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { HomeApiService } from '../../services/home-api.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  // Any specific logic for the header can be added here
+  @Input() title: string | undefined;
+
+  constructor(public homeApiService: HomeApiService) {}
+
 }

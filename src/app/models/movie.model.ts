@@ -1,11 +1,11 @@
 export interface Movie {
-  backdropPath: string;
+  backdrop_path: string;
   contentType: string;
   genres: string[];
-  originalTitle: string;
+  original_title: string;
   overview: string;
   poster_path: string;
-  releaseDate: string;
+  release_date: string;
   title: string;
   _id: number;
 }

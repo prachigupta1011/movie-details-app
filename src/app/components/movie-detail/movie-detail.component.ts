@@ -9,7 +9,7 @@ import { Movie } from '../../models/movie.model';
   styleUrls: ['./movie-detail.component.css']
 })
 export class MovieDetailComponent implements OnInit {
-  movie?: Movie;
+  movie: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,7 +20,7 @@ export class MovieDetailComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       this.movieService.getMovieDetails(+id).subscribe(data => {
-        this.movie = data;
+        this.movie = data.movie;
       }, error => {
         console.error('Error fetching movie details:', error);
       });
