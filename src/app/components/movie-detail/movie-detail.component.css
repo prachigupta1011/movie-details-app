@@ -1,13 +1,11 @@
-/* movie-detail.component.css */
-
 .movie-detail-container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text for contrast */
+    background-color: #000; 
+    color: #fff; 
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Adjusted for darker theme */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
   
   .movie-image {
@@ -18,14 +16,14 @@
   
   .movie-title {
     font-size: 2em;
-    color: #E4B721; /* Title color changed for better visibility */
+    color: #E4B721; 
     margin: 10px 0;
   }
   
   .movie-overview {
     font-size: 1em;
-    color: #ddd; /* Lighter text color for readability */
+    color: #ddd; 
   }
   
-  /* Add additional styling as needed */
+
   
