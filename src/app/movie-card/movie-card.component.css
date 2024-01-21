@@ -1,0 +1,32 @@
+.movie-title {
+    font-size: 18px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    position: relative;
+  }
+  
+  .movie-title:hover::after {
+    content: attr(data-full-title);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    white-space: normal;
+    z-index: 1;
+  }
+  
+  .card-image {
+    height: 300px;
+    width: 100%;
+  }
+  
+  .btn-clr {
+    font-weight: bold;
+    color: #E4B721; 
+  }

@@ -65,26 +65,4 @@ export class MovieListComponent implements OnInit {
     }
   }
 
-  isFavorite(movie: any): boolean {
-    return this.homeApiService.favoriteMovies.some(favMovie => favMovie.title === movie.title);
-  }
-
-  // Function to toggle favorite status
-  toggleFavorite(movie: any): void {
-    if (this.isFavorite(movie)) {
-      this.removeFavorite(movie);
-    } else {
-      this.homeApiService.addToFavourite(movie);
-    }
-  }
-
-  // Function to remove a movie from favorites
-  removeFavorite(movie: any): void {
-    const index = this.homeApiService.favoriteMovies.findIndex(
-      favMovie => favMovie.title === movie.title
-    );
-    if (index !== -1) {
-      this.homeApiService.removeFavorite(index);
-    }
-  }
 }

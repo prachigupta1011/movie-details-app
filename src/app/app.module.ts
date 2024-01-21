@@ -19,6 +19,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
     HomeComponent,
     MovieListComponent,
     MovieDetailComponent,
-    FavoritesComponent 
+    FavoritesComponent,
+    MovieCardComponent 
   ],
   imports: [
     BrowserModule,

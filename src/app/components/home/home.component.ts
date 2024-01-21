@@ -19,20 +19,20 @@ export class HomeComponent implements OnInit {
     this.fetchMovies();
   }
 
+  //Function to fetch movies
   fetchMovies() {
     this.homeApiService.getMovies().subscribe(
-      (data: any) => {
+      (data: Home[]) => {
         this.titleData = data;
-        this.filteredMovies = data;
-        this.selectedTitle = data[0].title;
-        this.filterMoviesByTitle(this.selectedTitle);
+        if (data && data.length > 0) {
+          this.selectTitle(data[0]); // Select the first title by default
+        }
       },
-      (error) => {
-        console.error('Error fetching movies:', error);
-      }
+      error => console.error('Error fetching movies:', error)
     );
   }
 
+  // Function to filter movies by title
   filterMoviesByTitle(data:any) {
     if(data){
       this.filteredMovies = data.movies;
@@ -42,29 +42,7 @@ export class HomeComponent implements OnInit {
   // Function to select a title from the side navigation
   selectTitle(title: Home) {
     this.selectedTitle = title;
-    this.filterMoviesByTitle(this.selectedTitle);
-  }
-
-   // Function to check if a movie is in favorites
-   isFavorite(movie: any): boolean {
-    return this.homeApiService.favoriteMovies.some(favMovie => favMovie.title === movie.title);
-  }
-
-  // Function to toggle favorite status
-  toggleFavorite(movie: any): void {
-    if (this.isFavorite(movie)) {
-      this.removeFavorite(movie);
-    } else {
-      this.homeApiService.addToFavourite(movie);
-    }
-  }
-
-  // Function to remove a movie from favorites
-  removeFavorite(movie: any): void {
-    const index = this.homeApiService.favoriteMovies.findIndex(favMovie => favMovie.title === movie.title);
-    if (index !== -1) {
-      this.homeApiService.removeFavorite(index);
-    }
+    this.filteredMovies = title ? title.movies : [];
   }
 
 }

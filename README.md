@@ -1,27 +1,38 @@
 # MovieDetailsApp
 
-This Angular-based application, created with Angular CLI version 17.0.2, provides a comprehensive platform to explore and manage movie details. It fetches data from a movies API and allows users to view movie genres, details, and manage their favorite movies.
+This application, built using Angular CLI version 17.0.2, serves as a comprehensive platform for exploring and managing movie details. It retrieves data from a movie API, allowing users to view genres, specific details of movies, and manage their favorite films.
 
 ## Features
-- Home page to display movies by title
-- Display movie as cards
-- Dynamic movie list based on genres
-- Detailed view for each movie
-- Ability to mark movies as favorites
-- Ability to remove movies as favourites
+- Home page showcasing movies by title.
+- Movie display as cards for easy browsing.
+- Dynamically generated movie list based on genres.
+- Detailed view available for each movie.
+- Functionality to mark or unmark movies as favorites.
 
-## Development server
-Run `ng serve` to start the dev server and navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting Started
+To set up this project locally, ensure you have Node.js (v18.13.0) and Angular CLI (v17.0.0) installed.
 
-## Code Scaffolding
-Use `ng generate component component-name` to create new components. Directives, pipes, services, classes, guards, interfaces, and modules can also be generated.
+### Installation
+1. Clone the repo: `git clone https://github.com/prachigupta1011/movie-details-app.git`
+2. Enter the project directory: `cd movie-details-app`
+3. Install dependencies: `npm install`
+4. Start the server: `npm start`
 
-## Build
-Use `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Tests
+Run tests using: `npm test`
+
+## Technologies Used
+- Angular: Main web framework.
+- TypeScript: Programming language.
+- Fake Store API: Used for mock testing.
+
+## Building the Project
+Execute `ng build`. Build artifacts are stored in `dist/`.
 
 ## Running Unit Tests
-Execute `ng test` to run unit tests via [Karma](https://karma-runner.github.io).
+Use `ng test` to perform unit tests via Karma.
 
+## Authors
+- Prachi Gupta
 
-## Further Help
-For more assistance with Angular CLI, use `ng help` or check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+For additional help with Angular CLI, refer to the [Angular CLI Documentation](https://angular.io/cli).
