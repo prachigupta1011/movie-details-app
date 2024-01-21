@@ -18,19 +18,16 @@ To set up this project locally, ensure you have Node.js (v18.13.0) and Angular C
 3. Install dependencies: `npm install`
 4. Start the server: `npm start`
 
-### Tests
-Run tests using: `npm test`
 
 ## Technologies Used
 - Angular: Main web framework.
 - TypeScript: Programming language.
-- Fake Store API: Used for mock testing.
+- https://rapidapi.com/ API: Used for mock testing.
 
 ## Building the Project
 Execute `ng build`. Build artifacts are stored in `dist/`.
 
-## Running Unit Tests
-Use `ng test` to perform unit tests via Karma.
+
 
 ## Authors
 - Prachi Gupta
